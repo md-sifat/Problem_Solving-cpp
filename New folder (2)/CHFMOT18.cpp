@@ -11,7 +11,7 @@ int main()
         cin >> s >> n;
         if (s < n)
         {
-            if (s % 2 == 0)
+            if (s % 2 == 0 || s==1)
             {
                 cout << 1 << endl;
             }
@@ -30,6 +30,14 @@ int main()
             {
                 cout << s / n << endl;
             }
+            else if ((s%n)%2==0)
+            {
+                cout<< (s/n)+1;
+            }
+            else if ((s%n)%2!=0)
+            {
+                cout<<(s/n)+2;
+            }   
         }
     }
 }
