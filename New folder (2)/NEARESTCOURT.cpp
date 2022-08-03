@@ -8,8 +8,12 @@ int main(){
     {
         int x,y;
         cin>>x>>y;
-        int ans=round(abs(x-y)/2);
-        cout<<ans<<endl;
+        if (abs(x-y)<2)
+        {
+            cout<<1<<endl;
+            continue;
+        }
+        
     }
     
 }
