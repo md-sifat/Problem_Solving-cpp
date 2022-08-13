@@ -9,25 +9,39 @@ int main()
     while (t--)
     {
         int n;
-        cin >> n;
+        // cin >> n;
         bool check = 0;
-        for (int i = 1; i < n; i++)
+        for (int n = 0; n < 1000; n++)
         {
+            check=0;
+            for (int i = 1; i < n; i++)
+            {
             for (int j = 1; j < n; j++)
             {
                 if ((2 * i + 2 * j + i * j) == n)
                 {
-                    check = 1;
+                    // cout<<i<<" "<<j<<endl;
+
+                    check=1;
                 }
             }
         }
         if (check)
         {
-            cout << "YES" << endl;
+            
+
+            cout<<n<<" ";
         }
-        else
-        {
-            cout << "NO" << endl;
+        
         }
+        
+        // if (check)
+        // {
+        //     cout << "YES" << endl;
+        // }
+        // else
+        // {
+        //     cout << "NO" << endl;
+        // }
     }
 }
