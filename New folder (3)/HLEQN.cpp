@@ -1,47 +1,23 @@
 #include <iostream>
-#include <string>
+#include<cmath>
 using namespace std;
 int main()
 {
-
     int t;
     cin >> t;
-    while (t--)
-    {
+    while (t--){
         int n;
-        // cin >> n;
+        cin >> n;
         bool check = 0;
-        for (int n = 0; n < 1000; n++)
-        {
-            check=0;
-            for (int i = 1; i < n; i++)
-            {
-            for (int j = 1; j < n; j++)
-            {
-                if ((2 * i + 2 * j + i * j) == n)
-                {
-                    // cout<<i<<" "<<j<<endl;
-
-                    check=1;
-                }
+        for (int i = 1; i <= sqrt(n) ; i++){
+            if( (n-2*i)%(2+i) == 0 && (n-2*i)>0 ){
+               cout << "YES" << endl;
+               check=1;
+               break;
             }
         }
-        if (check)
-        {
-            
-
-            cout<<n<<" ";
+        if (!check){
+            cout << "NO" << endl;
         }
-        
-        }
-        
-        // if (check)
-        // {
-        //     cout << "YES" << endl;
-        // }
-        // else
-        // {
-        //     cout << "NO" << endl;
-        // }
     }
 }
