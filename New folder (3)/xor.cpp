@@ -1,17 +1,20 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
  
-// Returns XOR of x and y
-int myXOR(int x, int y)
-{
-   return (x | y) & (~x | ~y);
-}
+
  
 // Driver program to test above function
 int main()
 {   
-   int x , y;
-   cin>>x>>y;
-   cout <<myXOR(x, y);
+   int x ;
+   cin>>x;
+   int arr[x];
+   for (int i = 0; i < x; i++)
+   {
+      cin>>x;
+   }
+   int *min= min_element(arr , arr+x);
+   cout <<*min<<endl;
+   
    return 0;
 }
