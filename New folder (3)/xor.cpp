@@ -1,20 +1,17 @@
-#include <bits/stdc++.h>
+#include<algorithm>
+#include<iostream>
 using namespace std;
- 
 
- 
-// Driver program to test above function
 int main()
-{   
-   int x ;
-   cin>>x;
-   int arr[x];
-   for (int i = 0; i < x; i++)
+{
+   int n; cin>>n;
+   int arr[n];
+   for (int i = 0; i < n; i++)
    {
-      cin>>x;
+      cin>>arr[i];
    }
-   int *min= min_element(arr , arr+x);
-   cout <<*min<<endl;
+
+   cout << *min_element(arr , arr+n);
+   // cout<<*min<<endl;
    
-   return 0;
 }
