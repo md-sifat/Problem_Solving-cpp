@@ -1,5 +1,4 @@
-#include<iostream>
-#include<algorithm>
+#include<bits/stdc++.h>
 using namespace std;
 int main()
 {
@@ -8,22 +7,19 @@ int main()
     {
         int n; cin>>n;
         int arr[n];
-        for (int i = 0; i < n; i++)
-        {
-            cin>>arr[i];
-        }
+        for(int &i:arr) cin >> i;
         sort(arr , arr+n);
-        int cntr=0;
-        for (int i = 0; i < n; i++)
-        {
-            if (arr[i]==arr[i+1])
-            {
-                cntr++;
+        int cntr=0,maxd=1;
+        for(int &i:arr){
+            if(i==i+i) cntr++;
+            else{
+                maxd=max(maxd,cntr);
+                cntr=0;
             }
-             
         }
-        
-        cout<<cntr;
+        maxd++;
+        if (maxd <= (n-maxd)+1) cout<<"YES\n";
+        else cout<<"NO\n";
     }
-    
+    return 0;
 }
