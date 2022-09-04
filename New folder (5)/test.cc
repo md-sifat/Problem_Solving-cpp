@@ -3,7 +3,7 @@ using namespace std;
 int main()
 {
     int n = 0 ,cntr = 0;
-    for (int i = 0; i < 10000; i)
+    for (int i = 0; i < 100; i)
     {
         cout<<i<<"  ";
         if(cntr==0){
