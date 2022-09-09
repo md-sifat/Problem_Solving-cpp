@@ -1,25 +1,42 @@
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
-bool isPrime(int n)
-{
-    for (int i = 2; i < n; i++)
-    {
-        if (n % i ==0)
-        {
-            return false;
-        }
-    }
-    return true;
-}
+
 int main()
 {
-    int n;
-    cin >> n;
-    for (int i = 1; i < n; i++)
+    int t;
+    cin >> t;
+    while (t--)
     {
-        if (isPrime(i))
+        int a, b, x, y;
+        cin >> a >> b >> x >> y;
+
+        int i=1;
+        while (a%x !=0)
         {
-            cout << i<<" ";
+            a*=x; b*=x;
+        }
+        while (b%y !=0)
+        {
+            a*=y; b*=y;
+        }
+        
+
+
+
+
+        if ((a / x) > (b / y))
+        {
+            cout << "ALICE" << endl;
+        }
+        else if ((a / x) == (b / y))
+        {
+
+            cout << "EQUAL" << endl;
+        }
+        else
+        {
+            cout << "BOB" << endl;
         }
     }
+    return 0;
 }

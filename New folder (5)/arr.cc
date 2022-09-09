@@ -9,5 +9,5 @@ int main()
     }
     for(int i:vec){
         cout<<vec[i]<<" ";
-    }
+    }   
 }
